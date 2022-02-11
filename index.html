@@ -10,28 +10,168 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+    .attribution { font-size: 11px; text-align: center;}
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      background-image: url("images/pattern-background-desktop.svg");
+    }
+
+    .card_div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .card {
+      width: 25%;
+      height: 80%;
+      background-color: white;
+      border-radius: 15px;
+      padding: 0px;
+      flex-direction: column;
+    }
+
+    .top_card {
+      height: 30%;
+      width: 100%;
+    }
+    
+    .top_card > img {
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .card_content {
+      font-family: 'Red Hat Display', sans-serif;
+      display: flex;
+      height: auto;
+      width: auto;
+      padding: 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .plan_div {
+      display: flex;
+      background-color: hsl(225, 100%, 98%);
+      width: 90%;
+      height: 70px;
+      border-radius: 10px;
+    }
+
+    .plan_div > img {
+      height: 60%;
+      align-self: center;
+      margin-left: 10px;
+    }
+
+    .price_div {
+      display: flex;
+      justify-content:center;
+      flex-direction: column;
+      margin: 15px;
+      margin-right: auto;
+    }
+
+    .card_heading {
+      color: hsl(223, 47%, 23%);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .card_paragraph {
+      color: hsl(224, 23%, 55%);
+      font-size: 12px;
+      font-weight: 500;
+      text-align: center;
+      margin-inline: 10%;
+    }
+
+    .plan_heading {
+      font-size: 12px;
+      color: hsl(223, 47%, 23%);
+      font-weight: 900;
+      margin: 0px;
+    }
+
+    .plan_paragraph {
+      color: hsl(224, 23%, 55%);
+      font-weight: 500;
+      font-size: 12px;
+      margin: 0px;
+    }
+
+    .change_paragraph {
+      font-size: 10px;
+      color: hsl(223, 47%, 23%);
+      align-self: center;
+      font-weight: 700;
+      margin-right: 15px;
+    }
+
+    .cancel_paragraph{
+      color: hsl(224, 23%, 55%);
+      font-size: 11px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    button {
+      color: white;
+      background-color: hsl(245, 75%, 52%);
+      border-radius: 10px;
+      border-width: 0px;
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 900;
+      font-size: 11px;
+      height: 40px;
+      width: 90%;
+      margin: 20px;
+      margin-top: 40px;
+    }
+
   </style>
 </head>
 <body>
 
-  Order Summary
+  <div class="card_div">
+    <div class="card">
+      <div class="top_card">
+        <img src="images/illustration-hero.svg" alt="a happy person listening music">
+      </div>
+      <div class="card_content">
+        <h1 class="card_heading">Order Summary</h1>
+      
+        <p class="card_paragraph">
+          You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!
+        </p>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div class="plan_div">
+          <img src="images/icon-music.svg">
+          <div class="price_div">
+            <h1 class="plan_heading">Annual Plan</h1>
+            <p class="plan_paragraph">$59.99/year</p>
+          </div>
+          <p class="change_paragraph"><ins>Change</ins></p>
+        </div>
+        <button>Proceed to Payment</button>
+        <p class="cancel_paragraph">Cancel Order</p>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Danilo Raposo</a>.
+    </div>
   </div>
+  
 </body>
 </html>
